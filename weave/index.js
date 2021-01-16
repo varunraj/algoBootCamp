@@ -28,7 +28,7 @@ function weave(sourceOne, sourceTwo) {
     
     combined = new Queue();
 
-    while(sourceOne.peek() != undefined ){
+    while(sourceOne.peek() || sourceTwo.peek() ){
         
         combined.add(sourceOne.remove())
         combined.add(sourceTwo.remove())
