@@ -12,12 +12,10 @@ function reverseInt(n) {
     
     const arr = n.toString().split('');
     
-    if (arr[0] === "-" ){
+    if (arr[0] === "-" )
         arr.shift()
-        return parseInt(arr.reverse().join(''),10) * -1 
-    } else 
-        return parseInt(arr.reverse().join(''),10) 
     
+    return parseInt(arr.reverse().join(''),10) * Math.sign(n)
 }
 
 module.exports = reverseInt;
