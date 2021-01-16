@@ -29,10 +29,13 @@ function weave(sourceOne, sourceTwo) {
     combined = new Queue();
 
     while(sourceOne.peek() || sourceTwo.peek() ){
+        if (sourceOne.peek()){
+            combined.add(sourceOne.remove())
+        }
         
-        combined.add(sourceOne.remove())
-        combined.add(sourceTwo.remove())
-
+        if (sourceTwo.peek()){
+            combined.add(sourceTwo.remove())
+        }
     }
 
     return combined;
